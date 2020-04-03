@@ -146,6 +146,7 @@ class SettingsScreen(Screen):
 			self.ids.switch_blue.active=False
 			self.ids.switch_cyan.active=False
 			
+			
 			self.ids.back_menu_settings.background_color=self.BLACK
 
 			self.manager.get_screen("menu").ids.open_button.background_color=self.BLACK
@@ -180,6 +181,7 @@ class SettingsScreen(Screen):
 			self.ids.switch_red.active=False
 			self.ids.switch_blue.active=False
 			self.ids.switch_black.active=False
+			
 			
 			self.ids.back_menu_settings.background_color=self.CYAN
 
