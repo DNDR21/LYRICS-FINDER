@@ -148,7 +148,6 @@ class SettingsScreen(Screen):
 			
 			self.ids.back_menu_settings.background_color=self.BLACK
 
-			
 			self.manager.get_screen("menu").ids.open_button.background_color=self.BLACK
 			self.manager.get_screen("menu").ids.go_settings_button.background_color=self.BLACK
 			self.manager.get_screen("menu").ids.song_box.foreground_color=self.GRAY
@@ -184,7 +183,6 @@ class SettingsScreen(Screen):
 			
 			self.ids.back_menu_settings.background_color=self.CYAN
 
-			
 			self.manager.get_screen("menu").ids.open_button.background_color=self.CYAN
 			self.manager.get_screen("menu").ids.go_settings_button.background_color=self.CYAN
 			self.manager.get_screen("menu").ids.song_box.foreground_color=self.CYAN
@@ -220,6 +218,7 @@ class SettingsScreen(Screen):
 
 
 class LyricsScreen(Screen):
+	
 	def click_plus_button(self):
 		self.ids.song_label.font_size +=1
 	def click_minus_button(self):
@@ -230,25 +229,29 @@ class LyricsScreen(Screen):
 
 
 class AddLyricsScreen(Screen):
-
 	
 	
-		
 	def click_plus(self):
 		self.ids.lyrics_ti.font_size +=1
 	def click_minus(self):
 		self.ids.lyrics_ti.font_size -=1
+		
+		
 	
 	def click_save(self):
+		
 		if (self.ids.path_ti.text !="") and (self.ids.lyrics_ti.text !=""):
+			
 			try:
 				os.mkdir("/sdcard/Lyrics")
 			except:
 				pass
+			
 			try:
 				dosya=open("/sdcard/Lyrics/"+(self.ids.path_ti.text)+".txt","w+")
 				dosya.write(self.ids.lyrics_ti.text)
 			except:
+				
 				try:
 					os.mkdir("/sdcard/Lyrics")
 				except:
@@ -268,6 +271,7 @@ class AddLyricsScreen(Screen):
 
 
 class MenuScreen(Screen):
+	
 	def __init__(self,**kwargs):
 		super(MenuScreen,self).__init__(**kwargs)
 		
@@ -278,6 +282,7 @@ class MenuScreen(Screen):
 					
 	
 	def click_downloaded_lyrics_button(self):
+		
 		try:
 			for r,d,f in os.walk("/sdcard/Lyrics/"):
 				for file in f:
@@ -289,23 +294,32 @@ class MenuScreen(Screen):
 				
 			
 	def click_open_button(self):
+		
 		if self.pressed_open<=0:
 			self.ids.open_button.text="OPEN"
+			
 		self.pressed_open +=1
 		
 		
 		if self.pressed_open>1:
+			
 			if self.ids.song_box.text !="":
+				
 				y=""
 				x=self.ids.song_box.text
+				
 				for i in range(len(x)):
+					
 					if i==0:
 						y=x[0].upper()
+						
 					elif x[i]==" ":
+						
 						y+="-"
 					else:
 						y+=x[i].lower()
 				try:
+					
 					self.r=requests.get("https://genius.com/"+y+"-lyrics")
 			
 					self.soup=bs(self.r.content,"html.parser")
@@ -336,8 +350,11 @@ class DownloadedLyricsScreen(Screen):
 	def click_return_menu_downloaded(self):
 		self.manager.get_screen("downloaded_lyrics").ids.downloaded_lyrics_label.text=""
 		
+		
 	def click_open_downloaded_lyrics(self):
+		
 		if (self.ids.downloaded_lyrics_label.text !=""):
+			
 			self.manager.get_screen("downloaded_lyrics").ids.downloaded_lyrics_label.text=""
 			
 			
