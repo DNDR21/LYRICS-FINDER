@@ -288,8 +288,7 @@ class MenuScreen(Screen):
 			files=os.listdir("/sdcard/Lyrics/")
 			list=sorted(files)
 			for file in list:
-				print(file)
-				self.manager.get_screen("downloaded_lyrics").ids.downloaded_lyrics_label.text+="\n"+file+"\n"
+				self.manager.get_screen("downloaded_lyrics").ids.downloaded_lyrics_label.text+="\n"+file[:-4]+"\n"
 		except:
 			pass
 				
