@@ -13,12 +13,25 @@ import os
 
 
 
+
+
+
+
+
+
+
+
 class MyScreenManager(ScreenManager):
 	pass
 		
 
 
 
+
+
+
+
+	
 
 
 
@@ -163,6 +176,11 @@ class MenuScreen(Screen):
 
 
 
+					
+
+					
+					
+
 class LyricsScreen(Screen):
 	
 	def click_plus_button(self):
@@ -179,6 +197,11 @@ class LyricsScreen(Screen):
 
 
 
+		
+		
+		
+		
+		
 class SettingsScreen(Screen):
 	
 	
@@ -448,7 +471,13 @@ class SettingsScreen(Screen):
 
 
 
+	
 
+	
+	
+	
+	
+	
 class AddLyricsScreen(Screen):
 			
 	def click_plus(self):
@@ -534,14 +563,13 @@ class DownloadedLyricsScreen(Screen):
 
 
 
+	
+	
+	
+	
+	
 class APP(App):
 	def build(self):
 		return Builder.load_file("LYRICS.kv")
 		
-		
-	
-
-		
-		
-
 APP().run()
