@@ -1,0 +1,339 @@
+MyScreenManager:
+	MenuScreen:
+		name:"menu"
+	LyricsScreen:
+		name:"lyrics"
+	SettingsScreen:
+		name:"settings"
+	AddLyricsScreen:
+		name:"add_lyrics"
+	DownloadedLyricsScreen:
+		name:"downloaded_lyrics"
+
+
+
+
+
+
+
+
+
+
+
+<MenuScreen>:
+	FloatLayout:
+		id:duzen_menu
+		
+		
+		TextInput:
+			id:song_box
+			size_hint:(1,.2)
+			pos:(0,1500)
+			background_color:(0,0,0,1)
+			foreground_color:(255,255,255,1)
+			hint_text:"SEARCH LYRICS"
+			multiline:False
+			
+		Label:
+			id:label_info
+			text:"Thank You For Using This Application\nLYRICS FINDER\nDeveloper:DNDR\n\nv 1.0.4"
+		
+		Button:
+			id:open_button
+			text:"START"#root.str#
+			pos:(750,0)
+			size_hint:(.3,.05)
+			on_press:
+				root.click_open_button()
+			
+		Button:
+			id:go_settings_button
+			text:"∞"
+			pos:(0,0)
+			size_hint:(.1,.05)
+			on_press:
+				root.manager.current = "settings"
+				root.manager.transition.direction = "right"
+		Button:
+			id:downloaded_lyrics_button
+			text:"DOWNLOADED LYRICS"
+			pos:(110,0)
+			size_hint:(.59,.05)
+			on_press:
+				root.manager.current="downloaded_lyrics"
+				root.manager.transition.direction="up"
+				root.click_downloaded_lyrics_button()
+
+
+
+
+
+
+
+
+
+
+
+
+<LyricsScreen>:
+	BoxLayout:
+		orientation:"vertical"
+		#size_hint:(None,None)
+		spacing:100
+		ScrollView:
+			size_hint:(1,100)
+			do_scroll_x:False
+			do_scrool_y:True
+			Label:
+				id:song_label
+				size_hint_y:None
+				height:self.texture_size[1]
+				padding:(10,10)
+				text:" \n"*100
+				font_size:20
+				
+				
+				
+		BoxLayout:		
+			Button:
+				id:back_menu_lyrics
+				size_hint:(1,10)
+				text:"RETURN MENU"
+				on_press:
+					root.manager.current = "menu"
+					root.manager.transition.direction = "right"
+			Button:
+				id:save_lyrics_in_lyrics
+				text:"SAVE THIS LYRICS"
+				size_hint:(1,10)
+				on_press:
+					root.manager.current="add_lyrics"
+					root.manager.transition.direction="up"
+				
+			
+		BoxLayout:
+			
+			
+			
+			
+			Button:
+				id:plus_button
+				text:"+"
+				size_hint:(1,10)
+				on_press:root.click_plus_button()
+			Button:
+				id:minus_button
+				text:"-"
+				size_hint:(1,10)
+				on_press:root.click_minus_button()
+				
+				
+				
+				
+				
+				
+				
+
+
+
+
+
+
+<SettingsScreen>:
+	FloatLayout:
+		
+		Button:
+			text:"RED"
+			pos:(0,1500)
+			size_hint:(.2,.05)
+			background_color:(255,0,0,1)
+		Switch:
+			id:switch_red
+			pos:(350,1450)
+			size_hint:(.1,.1)
+			active:False
+			on_active:root.click_switch_red(self,self.active)
+
+			
+		Button:
+			text:"BLUE"
+			pos:(0,1350)
+			size_hint:(.2,.05)
+			background_color:(0,0,255,1)
+			foreground_color:(0,0,0,1)
+		Switch:
+			id:switch_blue
+			pos:(350,1300)
+			size_hint:(.1,.1)
+			active:False
+			on_active:root.click_switch_blue(self,self.active)
+		
+		
+		Button:
+			text:"BLACK"
+			pos:(0,1200)
+			size_hint:(.2,.05)
+			background_color:(0,0,0,1)
+		Switch:
+			id:switch_black
+			pos:(350,1150)
+			size_hint:(.1,.1)
+			active:False
+			on_active:root.click_switch_black(self,self.active)
+			
+		Button:
+			text:"CYAN"
+			pos:(0,1050)
+			size_hint:(.2,.05)
+			background_color:(0,139,139,1)
+		Switch:
+			id:switch_cyan
+			pos:(350,1000)
+			size_hint:(.1,.1)
+			active:False
+			on_active:root.click_switch_cyan(self,self.active)
+	
+			
+				
+			
+		Button:
+			id:back_menu_settings
+			text:"RETURN MENU"
+			pos:(0,0)
+			size_hint:(.5,.1)
+			on_press:
+				root.manager.current = "menu"
+				root.manager.transition.direction = "left"
+				
+				
+		
+		
+				
+		Label:
+			text:"SETTINGS"
+			pos:(0,850)
+		Label:
+			text:"BACKGROUND"
+			pos:(-120,700)
+
+
+
+
+
+
+
+
+
+
+
+<AddLyricsScreen>:
+	FloatLayout:
+		TextInput:
+			id:path_ti
+			hint_text:"NAME:"
+			background_color:(0,0,0,1)
+			foreground_color:(255,255,255,1)
+			pos:(0,1700)
+			size_hint:(1,.1)
+		TextInput:
+			id:lyrics_ti
+			hint_text:"LYRICS:"
+			background_color:(0,0,0,1)
+			foreground_color:(255,255,255,1)
+			font_size:10
+			pos:(0,350)
+			size_hint:(1,.7)
+	Button:
+		id:save_lyrics_button
+		text:"SAVE"
+		pos:(440,0)
+		size_hint:(.3,.1)
+		on_press:
+			root.click_save()
+		
+		
+	Button:
+		id:back_lyrics_button
+		text:"RETURN LYRICS"
+		pos:(0,0)
+		size_hint:(.4,.1)
+		on_press:
+			root.click_back_lyrics_button()
+			root.manager.current="lyrics"
+			root.manager.transition.direction="down"
+	Button:
+		id:plus_button
+		text:"+"
+		pos:(770,100)
+		size_hint:(.3,.05)
+		on_press:
+			root.click_plus()
+	Button:
+		id:minus_button
+		text:"-"
+		pos:(770,0)
+		size_hint:(.3,.05)
+		on_press:
+			root.click_minus()
+	
+
+		
+
+
+<DownloadedLyricsScreen>:
+	
+	BoxLayout:
+		orientation:"vertical"
+		spacing:100
+		
+
+		TextInput:
+			id:song_box_downloaded_lyrics
+			hint_text:"LYRICS:"
+			size_hint:(1,10)		
+			background_color:(0,0,0,1)
+			foreground_color:(255,255,255,1)
+			multiline:False
+			on_text:root.on_text_song_box_downloaded_lyrics(self)
+
+		ScrollView:
+			size_hint:(1,60)
+			do_scroll_x:False
+			do_scrool_y:True
+			Label:
+				id:downloaded_lyrics_label
+				size_hint_y:None
+				height:self.texture_size[1]
+				padding:(10,10)
+				text:""
+				font_size:30
+		
+				
+								
+		
+		
+		
+		BoxLayout:
+			
+					
+			Button:
+				id:return_menu_downloaded
+				text:"RETURN MENU"
+				size_hint:(.5,5)
+				on_press:
+					root.manager.current="menu"
+					root.manager.transition.direction="down"
+					root.click_return_menu_downloaded()
+			
+			Button:
+				id:open_downloaded_lyrics
+				text:"OPEN"
+				size_hint:(.5,5)
+				on_press:
+					
+					root.click_open_downloaded_lyrics()
+		
+		
+
+			
+			
