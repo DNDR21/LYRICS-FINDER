@@ -2,7 +2,7 @@
 
 This program to find music lyrics uses Genius|Song Lyrics & Knowledege Lyrics
 
-This program to find music lyrics uses /sdcard/Lyrics/
+This program to find music lyrics uses /sdcard/.Lyrics/
 
 This program was written in Python GUI / Kivy language 
 
