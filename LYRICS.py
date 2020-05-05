@@ -69,13 +69,13 @@ class MenuScreen(Screen):
                 
 		self.manager.get_screen("downloaded_lyrics").ids.downloaded_lyrics_label.text=""
 		try:
-			files=os.listdir("/sdcard/.Lyrics/")
-			files=sorted(files)
+                        files=os.listdir("/sdcard/.Lyrics/")
+                        files=sorted(files)
 			
 			for file in files[1:]:
-				self.manager.get_screen("downloaded_lyrics").ids.downloaded_lyrics_label.text+="\n"+file[:-4]+"\n"
+                                self.manager.get_screen("downloaded_lyrics").ids.downloaded_lyrics_label.text+="\n"+file[:-4]+"\n"
 		except:
-			os.mkdir("/sdcard/.Lyrics/")
+                        os.mkdir("/sdcard/.Lyrics/")
 
                         
 	def click_open_button(self):
