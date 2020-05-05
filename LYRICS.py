@@ -1,3 +1,4 @@
+#modules#
 import kivy
 from kivy.app import App
 kivy.require('1.8.0')
@@ -11,7 +12,7 @@ from kivy.properties import (
 import requests
 from bs4 import BeautifulSoup as bs
 import os
-
+#############################################################################
 
 
 
@@ -69,12 +70,15 @@ class MenuScreen(Screen):
 
 	def click_downloaded_lyrics_button(self):
                 
-		self.manager.get_screen("downloaded_lyrics").ids.downloaded_lyrics_label.text=""	
-		files=os.listdir("/sdcard/.Lyrics/")
-		files=sorted(files)
+		self.manager.get_screen("downloaded_lyrics").ids.downloaded_lyrics_label.text=""
+		try:
+			files=os.listdir("/sdcard/.Lyrics/")
+			files=sorted(files)
 			
-		for file in files[1:]:
-                        self.manager.get_screen("downloaded_lyrics").ids.downloaded_lyrics_label.text+="\n"+file[:-4]+"\n"
+			for file in files[1:]:
+				self.manager.get_screen("downloaded_lyrics").ids.downloaded_lyrics_label.text+="\n"+file[:-4]+"\n"
+		except:
+			os.mkdir("/sdcard/.Lyrics/")
 
                         
 	def click_open_button(self):
