@@ -9,6 +9,7 @@ This program was written in Python GUI / Kivy language
 This program for Android 
 
 
-*upload date=4/3/20*
-*Last updated date=5/05/20*
+Upload date=4/3/20
+
+Last updated date=5/05/20
 
