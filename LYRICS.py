@@ -5,9 +5,6 @@ kivy.require('1.8.0')
 from kivy.uix.widget import Widget
 from kivy.lang.builder import Builder
 from kivy.uix.screenmanager import ScreenManager, Screen
-from kivy.properties import (
-    NumericProperty, ReferenceListProperty, ObjectProperty, StringProperty
-)
 
 import requests
 from bs4 import BeautifulSoup as bs
