@@ -17,9 +17,6 @@ MyScreenManager:
 
 
 
-
-
-
 <MenuScreen>:
 	background_color:[1,1,1,1]
 	canvas.before:
@@ -92,14 +89,6 @@ MyScreenManager:
 				color:[0,0,0,1]
 				on_press:
 					root.click_open_button()
-			
-
-
-
-
-
-
-
 
 
 
@@ -218,11 +207,6 @@ MyScreenManager:
 			size_hint:(.1,.1)
 			active:False
 			on_active:root.click_switch_blue(self,self.active)
-		
-		
-
-			
-		
 			
 		Button:
 			text:"CYAN"
@@ -297,11 +281,6 @@ MyScreenManager:
 
 
 
-
-
-
-
-
 <AddLyricsScreen>:
 	background_color:[1,1,1,1]
 	canvas.before:
@@ -369,7 +348,10 @@ MyScreenManager:
 			root.click_minus()
 	
 
-		
+
+
+
+
 
 
 <DownloadedLyricsScreen>:
@@ -436,8 +418,4 @@ MyScreenManager:
 				on_press:
 					
 					root.click_open_downloaded_lyrics()
-		
-		
-
-			
-			
+					
