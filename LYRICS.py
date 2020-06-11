@@ -10,7 +10,7 @@ from bs4 import BeautifulSoup as bs
 import os
 import sys
 
-Builder.load_file("LYRICS1.py")
+Builder.load_file("LYRICS.kv")
 
 
 
