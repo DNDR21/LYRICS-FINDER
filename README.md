@@ -11,5 +11,5 @@ This program for Android
 
 Upload date=4/3/20
 
-Last updated date=11/6/20
+Last updated date=6/11/20
 
