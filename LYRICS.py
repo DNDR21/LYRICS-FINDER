@@ -48,7 +48,7 @@ class MenuScreen(Screen):
 
     def click_downloaded_lyrics_button(self):
         self.manager.get_screen("downloaded_lyrics").ids.downloaded_lyrics_label.text=""
-        files=os.listdir("D:\DNDR\.Lyrics")#"/sdcard/.Lyrics/")
+        files=os.listdir("D:\.Lyrics")#"/sdcard/.Lyrics/")
         files=sorted(files)
         for file in files[1:]:
             self.manager.get_screen("downloaded_lyrics").ids.downloaded_lyrics_label.text+="\n"+file[:-4]+"\n"
@@ -57,7 +57,7 @@ class MenuScreen(Screen):
         if self.pressed_open>=0:
             if self.ids.song_box.text !="":
                 try:
-                    dosya=open("D:\DNDR\.Lyrics"+self.ids.song_box.text+".txt","r", encoding='utf-8')#/sdcard/.Lyrics/
+                    dosya=open("D:\.Lyrics"+self.ids.song_box.text+".txt","r", encoding='utf-8')#/sdcard/.Lyrics/
                     self.manager.get_screen("lyrics").ids.song_label.text="\n"*5+(dosya.read())+"\n"*5
                     self.manager.current="lyrics"
                     self.manager.transition.direction = "left"
@@ -374,11 +374,11 @@ class AddLyricsScreen(Screen):
 
         if (self.ids.path_ti.text !="") and (self.ids.lyrics_ti.text !=""):
             try:
-                os.mkdir("D:\DNDR\.Lyrics")#/sdcard/.Lyrics
+                os.mkdir("D:\.Lyrics")#/sdcard/.Lyrics
             except:
                 pass
 
-            dosya=open("D:\DNDR\.Lyrics"+(self.ids.path_ti.text)+".txt","w+", encoding='utf-8')#/sdcard/.Lyrics
+            dosya=open("D:\.Lyrics"+(self.ids.path_ti.text)+".txt","w+", encoding='utf-8')#/sdcard/.Lyrics
             dosya.write(self.ids.lyrics_ti.text)
 
             self.ids.save_lyrics_button.text="SAVED"
@@ -396,7 +396,7 @@ class DownloadedLyricsScreen(Screen):
             word=instance.text
             list=[]
             self.list_open=list
-            files=os.listdir("D:\DNDR\.Lyrics")#/sdcard/.Lyrics
+            files=os.listdir("D:\.Lyrics")#/sdcard/.Lyrics
             files=sorted(files)
 
             for file in files[1:]:
@@ -414,13 +414,13 @@ class DownloadedLyricsScreen(Screen):
             self.manager.get_screen("downloaded_lyrics").ids.downloaded_lyrics_label.text=""
 
             try:
-                files=os.listdir("D:\DNDR\.Lyrics")#/sdcard/.Lyrics
+                files=os.listdir("D:\.Lyrics")#/sdcard/.Lyrics
                 files=sorted(files)
 
                 for file in files[1:]:
                     self.manager.get_screen("downloaded_lyrics").ids.downloaded_lyrics_label.text+="\n"+file[:-4]+"\n"
             except:
-                os.mkdir("D:\DNDR\.Lyrics")#/sdcard/.Lyrics
+                os.mkdir("D:\.Lyrics")#/sdcard/.Lyrics
 
 
     def click_return_menu_downloaded(self):
@@ -436,7 +436,7 @@ class DownloadedLyricsScreen(Screen):
                 self.manager.get_screen("downloaded_lyrics").ids.downloaded_lyrics_label.text=""
 
                 try:
-                    dosya=open("D:\DNDR\.Lyrics"+self.list_open[0]+".txt","r", encoding='utf-8')#/sdcard/.Lyrics
+                    dosya=open("D:\.Lyrics"+self.list_open[0]+".txt","r", encoding='utf-8')#/sdcard/.Lyrics
                     self.manager.get_screen("lyrics").ids.song_label.text=dosya.read()
                     
                     self.manager.get_screen("add_lyrics").ids.path_ti.text=self.list_open[0]
