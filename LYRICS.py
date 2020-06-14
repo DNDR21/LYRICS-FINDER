@@ -48,7 +48,7 @@ class MenuScreen(Screen):
 
     def click_downloaded_lyrics_button(self):
         self.manager.get_screen("downloaded_lyrics").ids.downloaded_lyrics_label.text=""
-        files=os.listdir("D:/DNDR/.Lyrics/")#"/sdcard/.Lyrics/")
+        files=os.listdir("D:/.Lyrics/")#"/sdcard/.Lyrics/")
         files=sorted(files)
         #print(files)
         for file in files[1:]:
@@ -58,7 +58,7 @@ class MenuScreen(Screen):
         if self.pressed_open>=0:
             if self.ids.song_box.text !="":
                 try:
-                    dosya=open("D:/DNDR/.Lyrics/"+self.ids.song_box.text+".txt","r", errors='ignore')#/sdcard/.Lyrics/
+                    dosya=open("D:/.Lyrics/"+self.ids.song_box.text+".txt","r", errors='ignore')#/sdcard/.Lyrics/
                     self.manager.get_screen("lyrics").ids.song_label.text="\n"*5+(dosya.read())+"\n"*5
                     self.manager.current="lyrics"
                     self.manager.transition.direction = "left"
@@ -375,11 +375,11 @@ class AddLyricsScreen(Screen):
 
         if (self.ids.path_ti.text !="") and (self.ids.lyrics_ti.text !=""):
             try:
-                os.mkdir("D:\DNDR\.Lyrics")#/sdcard/.Lyrics
+                os.mkdir("D:\.Lyrics")#/sdcard/.Lyrics
             except:
                 pass
             
-            file=open("D:/DNDR/.Lyrics/"+(self.ids.path_ti.text)+".txt","w+", errors='ignore')#/sdcard/.Lyrics
+            file=open("D://.Lyrics/"+(self.ids.path_ti.text)+".txt","w+", errors='ignore')#/sdcard/.Lyrics
             file.write(self.ids.lyrics_ti.text)
 
             self.ids.save_lyrics_button.text="SAVED"
@@ -390,7 +390,7 @@ class DownloadedLyricsScreen(Screen):
 
         self.list_open=[]
         try:
-            open("D:/DNDR/.Lyrics/"+".set_color.txt","w+")
+            open("D:/.Lyrics/"+".set_color.txt","w+")
         except:
             os.mkdir("D:\DNDR\.Lyrics")
     def on_text_song_box_downloaded_lyrics(self,instance):
@@ -401,7 +401,7 @@ class DownloadedLyricsScreen(Screen):
             word=instance.text
             list=[]
             self.list_open=list
-            files=os.listdir("D:/DNDR/.Lyrics/")#/sdcard/.Lyrics
+            files=os.listdir("D:/.Lyrics/")#/sdcard/.Lyrics
             files=sorted(files)
             
             for file in files[1:]:
@@ -417,7 +417,7 @@ class DownloadedLyricsScreen(Screen):
             self.manager.get_screen("downloaded_lyrics").ids.downloaded_lyrics_label.text=""
 
             try:
-                files=os.listdir("D:/DNDR/.Lyrics/")#/sdcard/.Lyrics
+                files=os.listdir("D:/.Lyrics/")#/sdcard/.Lyrics
                 files=sorted(files)
 
                 for file in files[1:]:
