@@ -379,7 +379,7 @@ class AddLyricsScreen(Screen):
             except:
                 pass
             
-            file=open("D://.Lyrics/"+(self.ids.path_ti.text)+".txt","w+", errors='ignore')#/sdcard/.Lyrics
+            file=open("D:/.Lyrics/"+(self.ids.path_ti.text)+".txt","w+", errors='ignore')#/sdcard/.Lyrics
             file.write(self.ids.lyrics_ti.text)
 
             self.ids.save_lyrics_button.text="SAVED"
@@ -392,7 +392,7 @@ class DownloadedLyricsScreen(Screen):
         try:
             open("D:/.Lyrics/"+".set_color.txt","w+")
         except:
-            os.mkdir("D:\DNDR\.Lyrics")
+            os.mkdir("D:\.Lyrics")
     def on_text_song_box_downloaded_lyrics(self,instance):
 
         if instance.text !="":
@@ -423,7 +423,7 @@ class DownloadedLyricsScreen(Screen):
                 for file in files[1:]:
                     self.manager.get_screen("downloaded_lyrics").ids.downloaded_lyrics_label.text+="\n"+file[:-4]+"\n"
             except:
-                os.mkdir("D:\DNDR\.Lyrics")#/sdcard/.Lyrics
+                os.mkdir("D:\.Lyrics")#/sdcard/.Lyrics
 
 
     def click_return_menu_downloaded(self):
@@ -439,8 +439,8 @@ class DownloadedLyricsScreen(Screen):
                 self.manager.get_screen("downloaded_lyrics").ids.downloaded_lyrics_label.text=""
 
                 try:
-                    dosya=open("D:/DNDR/.Lyrics/"+self.list_open[0]+".txt","r", errors='ignore')#/sdcard/.Lyrics
-                    self.manager.get_screen("lyrics").ids.song_label.text=dosya.read()
+                    file=open("D:/.Lyrics/"+self.list_open[0]+".txt","r", errors='ignore')#/sdcard/.Lyrics
+                    self.manager.get_screen("lyrics").ids.song_label.text=file.read()
                     
                     self.manager.get_screen("add_lyrics").ids.path_ti.text=self.list_open[0]
                     self.manager.get_screen("add_lyrics").ids.lyrics_ti.text=self.manager.get_screen("lyrics").ids.song_label.text
