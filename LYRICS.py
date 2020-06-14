@@ -447,8 +447,7 @@ class DownloadedLyricsScreen(Screen):
 
                     self.manager.current="lyrics"
                     self.manager.transition.direction="up"
-                except Exception as e:
-                    print(e)
+                except:
                     self.ids.downloaded_lyrics_label.text="SONG NOT FOUND!!!"
 
 
