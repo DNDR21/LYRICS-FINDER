@@ -8,7 +8,7 @@ This program was written in Python 3.5+ GUI / Kivy language
 
 This program for Android 
 
-
+Version=1.0.1
 Upload date=4/3/20
 
 Last updated date=6/11/20
