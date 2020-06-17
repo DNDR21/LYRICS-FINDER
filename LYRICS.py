@@ -12,7 +12,7 @@ import sys
 
 from search_lyrics import *
 
-Builder.load_file("LYRICS.txt")
+Builder.load_file("LYRICS.kv")
 
 
 
