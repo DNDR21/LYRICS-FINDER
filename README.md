@@ -12,8 +12,8 @@ This program for Android
 
 Version=1.0.1
 
-
 Upload date=4/3/20
 
-Last updated date=6/17/20
+Last updated date=6/19/20
 
+Stable version updated date=__/__/__
