@@ -10,7 +10,7 @@ This program for Android
 
 
 
-Version=1.0.1
+Version=1.0.4
 
 Upload date=4/3/20
 
