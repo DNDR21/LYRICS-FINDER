@@ -14,6 +14,6 @@ Version=1.0.1
 
 Upload date=4/3/20
 
-Last updated date=6/19/20
+Last updated date=6/23/20
 
-Stable version updated date=__/__/__
+Stable version updated date=6/23/20
