@@ -131,6 +131,7 @@ class SettingsScreen(Screen):
 
     def __init__(self,**kwargs):
         super(SettingsScreen,self).__init__(**kwargs)
+        self.local=local_extension
         self.RED=(255,0,0,1)
         self.BLACK=(0,0,0,1)
         self.CYAN=(0,139,139,1)
