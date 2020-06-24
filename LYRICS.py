@@ -14,7 +14,7 @@ import sys
 from search_lyrics import *
 from local import *
 
-local_extension="D:/.Lyrics/"
+local_extension="/sdcard/.Lyrics/"
 
 Builder.load_file("LYRICS.kv")
 
