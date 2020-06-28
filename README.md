@@ -26,6 +26,14 @@ Stable version updated date=6/23/20
   * Run this command: `pip install -r requirements.txt`
   * And this: `python impulse.py --help`
 
+* Windows:
+  * Download Python 3.8 from [here](https://www.python.org/downloads/release/python-38)
+  * Launch installer, click `add python to PATH`
+  * Download Impulse
+  * Open cmd or powershell in Impulse directory
+  * Run this command: `pip install -r requirements.txt`
+  * And this: `python impulse.py --help`
+
 *Step by Step Installation:
   *Windows:
     *Download Python 3.5+ for windows [here](https://www.python.org/downloads/release/python-353/)
