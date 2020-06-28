@@ -18,6 +18,13 @@ Stable version=1.0.4
 
 Stable version updated date=6/23/20
 
+* Windows:
+  * Download Python 3.8 from [here](https://www.python.org/downloads/release/python-38)
+  * Launch installer, click `add python to PATH`
+  * Download Impulse
+  * Open cmd or powershell in Impulse directory
+  * Run this command: `pip install -r requirements.txt`
+  * And this: `python impulse.py --help`
 
 *step by step installation:
 *Windows:
