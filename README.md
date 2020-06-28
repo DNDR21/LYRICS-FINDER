@@ -10,11 +10,11 @@ This program for Android
 
 Version=1.0.5
 
+Stable version=1.0.4
+
 Upload date=3/4/20
 
 Last updated date=6/23/20
-
-Stable version=1.0.4
 
 Stable version updated date=6/23/20
 
