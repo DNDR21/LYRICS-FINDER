@@ -18,15 +18,12 @@ Stable version=1.0.4
 
 Stable version updated date=6/23/20
 
- *step by step installation:
 
+*step by step installation:
 *Windows:
  * Download Python 3.5+ for windows [here](https://www.python.org/downloads/release/python-353/)
- 
  *Run check modules.py and wait for installation
- 
  *After installation is finished,run LYRICS.py
-
 *Android:
  *Download Python 3 for [here](https://play.google.com/store/apps/details?id=ru.iiec.pydroid3&hl)
  *Run check modules.py and wait for installation
