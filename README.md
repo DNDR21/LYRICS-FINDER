@@ -25,6 +25,6 @@ Stable version updated date=6/23/20
     * After installation is finished,run LYRICS.py
 
   * Android:
-    * Download Python 3 for [here](https://play.google.com/store/apps/details?id=ru.iiec.pydroid3&hl)
+    * Download Python 3 for android [here](https://play.google.com/store/apps/details?id=ru.iiec.pydroid3&hl)
     * Run check modules.py and wait for installation
     * After installation is finished,run LYRICS.py
