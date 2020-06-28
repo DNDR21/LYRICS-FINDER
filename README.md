@@ -18,8 +18,7 @@ Stable version=1.0.4
 
 Stable version updated date=6/23/20
 
-
-*step by step installation:
+ *step by step installation:
 
 *Windows:
  * Download Python 3.5+ for windows [here](https://www.python.org/downloads/release/python-353/)
