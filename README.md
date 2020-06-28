@@ -21,7 +21,7 @@ Stable version updated date=6/23/20
 * Step by Step Installation:
   * Windows:
     * Download Python 3.5+ for windows [here](https://www.python.org/downloads/release/python-353/)
-    * Open LYRICS.py change local_extension to D:\.Lyrics\
+    * Open LYRICS.py change local_extension to D:\ .Lyrics\
     * Run check modules.py and wait for installation
     * After installation is finished,run LYRICS.py
 
