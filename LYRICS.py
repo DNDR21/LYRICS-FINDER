@@ -66,7 +66,7 @@ class MenuScreen(Screen):
                         self.manager.get_screen("add_lyrics").ids.path_ti.text=self.ids.song_box.text
                         self.manager.current="lyrics"
                         self.manager.transition.direction = "left"
-                    except AttributeError:
+                    except:
                         try:
                             open_lyrics=Search(self.ids.song_box.text)
                             open_lyrics.open_lyrics()
