@@ -29,7 +29,6 @@ Stable version updated date=6/23/20
 
   * Android:
     * Download Python 3 for android [here](https://play.google.com/store/apps/details?id=ru.iiec.pydroid3&hl)
-    * Run check modules.py and wait for installation
     * Open the directory where you downloaded the file in terminal
     * After run, python -m pip install -upgarde pip
     * After that run, pip install -r requirements.txt
