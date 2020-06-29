@@ -22,10 +22,20 @@ Stable version updated date=6/23/20
   * Windows:
     * Download Python 3.5+ for windows [here](https://www.python.org/downloads/release/python-353/)
     * Open LYRICS.py change local_extension to D:\ .Lyrics\
-    * Run check modules.py and wait for installation
-    * After installation is finished,run LYRICS.py
+    * Open the directory where you downloaded the file in cmd
+    * After run, python -m pip install -upgarde pip
+    * After that run, pip install -r requirements.txt
+    * After all over, installation is finished,run LYRICS.py
 
   * Android:
     * Download Python 3 for android [here](https://play.google.com/store/apps/details?id=ru.iiec.pydroid3&hl)
     * Run check modules.py and wait for installation
-    * After installation is finished,run LYRICS.py
+    * Open the directory where you downloaded the file in terminal
+    * After run, python -m pip install -upgarde pip
+    * After that run, pip install -r requirements.txt
+    * After all over, installation is finished,run LYRICS.py
+ 
+ * Notes:
+   * İf you can't install with requirements.txt, run check modules.py and wait for installation
+   * LYRICS.py will be ready to run after installation
+ 
