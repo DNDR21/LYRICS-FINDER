@@ -16,7 +16,7 @@ Upload date=3/4/20
 
 Last updated date=6/23/20
 
-Stable version updated date=6/23/20
+Stable version upload date=6/23/20
 
 * Step by Step Installation:
   * Windows:
