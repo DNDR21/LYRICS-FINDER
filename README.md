@@ -6,7 +6,7 @@
 
 * This program was written in Python 3.5+ GUI / Kivy language 
 
-* This program for Android 
+* This program for Android but if you want to run in other system, you can do it 
 
 Version=1.0.5
 
