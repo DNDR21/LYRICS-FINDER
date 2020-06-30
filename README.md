@@ -24,14 +24,14 @@ Stable version upload date=6/23/20
     * Open LYRICS.py change local_extension to D:/.Lyrics/
     * Open the directory where you downloaded the file in cmd
     * After, run python -m pip install --upgrade pip
-    * After that, run pip install -r requirements.txt
+    * After that, run pip install -r requirements_for_windows.txt
     * After all over, installation is finished,run LYRICS.py
 
   * Android:
     * Download Python 3 for android [here](https://play.google.com/store/apps/details?id=ru.iiec.pydroid3&hl)
     * Open the directory where you downloaded the file in terminal
     * After, run pip install --upgrade pip
-    * After that, run pip install -r requirements.txt
+    * After that, run pip install -r requirements_for_android.txt
     * After all over, installation is finished,run LYRICS.py
  
  * Notes:
