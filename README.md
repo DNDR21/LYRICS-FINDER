@@ -8,13 +8,13 @@
 
 * This program for Android but if you want to run in other system, you can do it 
 
-Version=1.0.5
+Version=1.1.0
 
-Stable version=1.0.4
+Stable version=1.0.5
 
 Upload date=3/4/20
 
-Last updated date=6/23/20
+Last updated date=7/11/20
 
 Stable version upload date=6/23/20
 
