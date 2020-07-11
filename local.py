@@ -17,3 +17,4 @@ class local():
         open(self.local+".set_color.txt","w+")
         open(self.local+".last_theme.txt","w+").write("LIGHT")
         open(self.local+".local.txt","w+").write(self.local)
+        open(self.local+".lyrics.txt","a+")
