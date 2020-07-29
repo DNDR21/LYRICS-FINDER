@@ -35,6 +35,6 @@ Stable version upload date=6/23/20
     * After all over, installation is finished,run LYRICS.py
  
  * Notes:
-   * If errors occur while installing on windows, see here [here](https://kivy.org/doc/stable-1.10.1/installation/installation-windows.html)
+   * If errors occur while installing on windows, see [here](https://kivy.org/doc/stable-1.10.1/installation/installation-windows.html)
    * LYRICS.py will be ready to run after installation
  
