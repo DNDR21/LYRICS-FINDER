@@ -22,7 +22,7 @@ from local import *
 
 version="3a420566d0f0a93a93e724761edcdddacd3ee799ae6647f4cc10f4bff0179d64"
 
-local_extension="D:/.Lyrics/"
+local_extension=" /sdcard/.Lyrics/"
 
 Builder.load_file("LYRICS.kv")
 
