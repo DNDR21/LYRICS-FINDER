@@ -8,13 +8,13 @@
 
 * This program for Android but if you want to run in other system, you can do it 
 
-Version=1.1.0
+Version=1.1.2
 
 Stable version=1.0.5
 
 Upload date=3/4/20
 
-Last updated date=7/11/20
+Last updated date=7/29/20
 
 Stable version upload date=6/23/20
 
@@ -35,6 +35,6 @@ Stable version upload date=6/23/20
     * After all over, installation is finished,run LYRICS.py
  
  * Notes:
-   * İf you can't install with requirements.txt, run check modules.py and wait for installation
+   * If errors occur while installing on windows, see here [here](https://kivy.org/doc/stable-1.10.1/installation/installation-windows.html)
    * LYRICS.py will be ready to run after installation
  
