@@ -3,5 +3,4 @@ requests
 beautifulsoup4
 docutils
 pygments
-pypiwin32
 kivy
