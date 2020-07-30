@@ -33,8 +33,9 @@ Stable version upload date=6/23/20
     * After, run pip install --upgrade pip
     * After that, run pip install -r requirements.txt
     * After all over, installation is finished,run LYRICS.py
+    * İf don't understand how to install modules, watch this [video](https://www.youtube.com/watch?v=iMOj2SKUPHQ) for android installation
  
  * Notes:
-   * If errors occur while installing on windows, see [here](https://kivy.org/doc/stable-1.10.1/installation/installation-windows.html)
+   * If errors occur while kivy installing on windows, see [here](https://kivy.org/doc/stable-1.10.1/installation/installation-windows.html)
    * LYRICS.py will be ready to run after installation
  
