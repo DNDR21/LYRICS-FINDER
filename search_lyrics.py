@@ -92,7 +92,7 @@ class Search():
             soup=bs(r.content,"html.parser")
             soup=soup.find("div",{"class":"readme"})
             soup=soup.find_all("li")
-            soup=soup[6].text
+            soup=soup[5].text
             hash = hashlib.sha256(soup.encode())
             soup=hash.hexdigest()
             if soup==version:
