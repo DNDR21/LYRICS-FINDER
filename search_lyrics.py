@@ -91,8 +91,8 @@ class Search():
             r=requests.get(self.name+"/blob/master/README.md")
             soup=bs(r.content,"html.parser")
             soup=soup.find("div",{"class":"readme"})
-            soup=soup.find_all("p")
-            soup=soup[4].text
+            soup=soup.find_all("li")
+            soup=soup[6].text
             hash = hashlib.sha256(soup.encode())
             soup=hash.hexdigest()
             if soup==version:
